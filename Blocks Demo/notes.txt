@@ -8,3 +8,4 @@ Water -> Falls down and then sideways when not bound.
 Stone -> Not affected by gravity
 Plant -> Grows slowly when above water, burns in fire
 Fire -> Burns only plants and propogates as necesary/reasonable
+Lava -> Water Physics.  Generates fire when adjacent to Plant.  Becomes Stone on contact with water.  

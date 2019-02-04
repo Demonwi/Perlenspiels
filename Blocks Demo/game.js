@@ -1,12 +1,12 @@
 // game.js for Perlenspiel 3.2
 
+/*jslint nomen: true, white: true */
+/*global PS */
+
 // The "use strict" directive in the following line is important. Don't alter or remove it!
 "use strict";
 
 // The following comment lines are for JSLint/JSHint. Don't alter or remove them!
-
-/*jslint nomen: true, white: true */
-/*global PS */
 
 /*
 This is a template for creating new Perlenspiel games.
@@ -22,13 +22,13 @@ Called once after engine is initialized but before event-polling begins.
 */
 
 // Dict for index nums -> color
-var colorDict = {}
+var colorDict = {};
 // Air
-colorDict[0] = 0xFFFFFF
+colorDict[0] = 0xFFFFFF;
 // Dirt
-colorDict[1] = 0x573B0C
+colorDict[1] = 0x573B0C;
 // Water
-colorDict[2] = 0x2FB8AC
+colorDict[2] = 0x2FB8AC;
 
 
 
@@ -70,17 +70,17 @@ It doesn't have to do anything.
 
 // Uncomment the following BLOCK to expose PS.touch() event handler:
 
-/*
+
 
 PS.touch = function( x, y, data, options ) {
 	// Uncomment the following code line to inspect x/y parameters:
 
-	// PS.debug( "PS.touch() @ " + x + ", " + y + "\n" );
+	PS.debug( "PS.touch() @ " + x + ", " + y + "\n" );
 
 	// Add code here for mouse clicks/touches over a bead.
 };
 
-*/
+
 
 /*
 PS.release ( x, y, data, options )
