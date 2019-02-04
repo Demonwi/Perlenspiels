@@ -21,14 +21,23 @@ Called once after engine is initialized but before event-polling begins.
 [options] = an object with optional parameters; see API documentation for details.
 */
 
+// Dict for index nums -> color
+var colorDict = {}
+// Air
+colorDict[0] = 0xFFFFFF
+// Dirt
+colorDict[1] = 0x573B0C
+// Water
+colorDict[2] = 0x2FB8AC
+
+
+
 // Uncomment the following BLOCK to expose PS.init() event handler:
 
-/*
 
 PS.init = function( system, options ) {
 	// Uncomment the following code line to verify operation:
-
-	// PS.debug( "PS.init() called\n" );
+	PS.debug( "PS.init() called\n" );
 
 	// This function should normally begin with a call to PS.gridSize( x, y )
 	// where x and y are the desired initial dimensions of the grid.
@@ -36,18 +45,18 @@ PS.init = function( system, options ) {
 	// The sample call below sets the grid to the default dimensions (8 x 8).
 	// Uncomment the following code line and change the x and y parameters as needed.
 
-	// PS.gridSize( 8, 8 );
+	PS.gridSize( 16, 16 );
 
 	// This is also a good place to display your game title or a welcome message
 	// in the status line above the grid.
 	// Uncomment the following code line and change the string parameter as needed.
 
-	// PS.statusText( "Game" );
+	PS.statusText( "Dirt Viewer" );
 
 	// Add any other initialization code you need here.
 };
 
-*/
+
 
 /*
 PS.touch ( x, y, data, options )
@@ -204,17 +213,17 @@ http://users.wpi.edu/~bmoriarty/ps/constants.html
 
 // Uncomment the following BLOCK to expose PS.keyUp() event handler:
 
-/*
+
 
 PS.keyUp = function( key, shift, ctrl, options ) {
 	// Uncomment the following code line to inspect first three parameters:
 
-	// PS.debug( "PS.keyUp(): key=" + key + ", shift=" + shift + ", ctrl=" + ctrl + "\n" );
+	PS.debug( "PS.keyUp(): key=" + key + ", shift=" + shift + ", ctrl=" + ctrl + "\n" );
 
 	// Add code here for when a key is released.
 };
 
-*/
+
 
 /*
 PS.input ( sensors, options )
